@@ -16,3 +16,11 @@ class Teachers(models.Model):
     '''
     name = models.CharField(max_length=32)
 
+class Students(models.Model):
+    '''
+    学生
+    '''
+    username = models.CharField(max_length=32)
+    age = models.IntegerField(max_length=32)
+    gender = models.BooleanField()
+    cs = models.ForeignKey(Classes, on_delete=models.CASEADE)
