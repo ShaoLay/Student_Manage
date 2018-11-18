@@ -23,4 +23,4 @@ class Students(models.Model):
     username = models.CharField(max_length=32)
     age = models.IntegerField(max_length=32)
     gender = models.BooleanField()
-    cs = models.ForeignKey(Classes, on_delete=models.CASEADE)
+    cs = models.ForeignKey(Classes, on_delete=models.CASCADE)
