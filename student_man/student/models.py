@@ -10,3 +10,9 @@ class Classes(models.Model):
     title = models.CharField(max_length=32)
     a = models.ManyToManyField('Teachers')
 
+class Teachers(models.Model):
+    '''
+    老师
+    '''
+    name = models.CharField(max_length=32)
+
