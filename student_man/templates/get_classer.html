@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOCTYPE html>
+<html lang="en">
+<head>
+ <style>
+  tr td{ border:1px solid #000;text-align:center;}
+ </style>
+ <meta charset="UTF-8">
+ <title>Title</title>
+</head>
+<body>
+ 
+<div>
+ <table>
+  <thead>
+   <tr>
+    <th>ID</th> <th>名称</th> <th>操作</th>
+   </tr>
+  </thead>
+  <tbody>
+   {% for row in cls_list %}
+   <tr>
+    <td>{{ row.id }}</td>
+    <td>{{ row.title }}</td>
+    <td><a href="/del_classes.html?nid={{ row.id }}" rel="external nofollow" rel="external nofollow" >删除</a>
+     |<a href="/edit_classes.html?nid={{ row.id }}" rel="external nofollow" rel="external nofollow" >编辑</a>
+    </td>
+   </tr>
+   {% endfor %}
+  </tbody>
+ </table>
+</div>
+ 
+<div><a href="/add_classes.html" rel="external nofollow" rel="external nofollow" >添加</a> </div>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
