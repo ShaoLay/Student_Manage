@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from student.views import classes
+from student.views import classes, students
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,4 +24,9 @@ urlpatterns = [
     url('add_classes.html', classes.add_classes),
     url('del_classes.html', classes.del_classes),
     url('edit_classes.html', classes.edit_classes),
+
+    url('students.html', students.get_students),
+    url('add_students.html', students.add_students),
+    url('del_students.html', students.del_students),
+    url('edit_students.html', students.edit_students),
 ]

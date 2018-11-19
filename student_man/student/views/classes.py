@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from student import models
 
 
-def get_classer(request):
+def get_classes(request):
     '''
     获取班级
     :param request:
@@ -12,7 +12,7 @@ def get_classer(request):
     cls_list = models.Classes.objects.all()
     return render(request, 'get_classes.html',{'cls_list':cls_list})
 
-def add_classed(request):
+def add_classes(request):
     '''
     添加班级
     :param request:
