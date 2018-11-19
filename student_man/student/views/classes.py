@@ -31,8 +31,8 @@ def del_classes(request):
     :param request:
     :return:
     '''
-     nid=request.GET.get('nid','')
-     models.Classes.objects.filter(id=nid).delete()
-     return redirect('/classes.html')
+    nid = request.GET.get('nid','')
+    models.Classes.objects.filter(id=nid).delete()
+    return redirect('/classes.html')
 
 
