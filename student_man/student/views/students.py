@@ -33,3 +33,13 @@ def add_students(request):
         cs_id=c
         )
         return redirect('/students.html')
+
+def del_students(request):
+    '''
+    删除学生
+    :param request:
+    :return:
+    '''
+    nid = request.GET.get('nid', '')
+    models.Students.objects.filter(id=nid).delete()
+    return redirect('/students.html')
