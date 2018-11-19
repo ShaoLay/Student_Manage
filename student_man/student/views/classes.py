@@ -35,4 +35,18 @@ def del_classes(request):
     models.Classes.objects.filter(id=nid).delete()
     return redirect('/classes.html')
 
-
+def edit_classes(request):
+    '''
+    编辑班级
+    :param request:
+    :return:
+    '''
+    if request.method=="GET":
+        nid = request.GET.get('nid', '')
+        obj=models.Classes.objects.get(id=nid)
+        return render(request,'edit_classes.html',{'obj':obj})
+    elif request.method=="POST":
+        nid=request.POST.get('nid','')
+        title=request.POST.get('xxoo','')
+        models.Classes.objects.filter(id=nid).update(title=title)
+        return redirect('/classes.html')
